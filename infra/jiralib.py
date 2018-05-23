@@ -19,7 +19,7 @@ import issueparser
 from datetime import datetime
 
 class JiraLib:
-    def __init__(self, server_name, user, password, component = 'Infrastructure', delivery_team = 'MOS Infra'):
+    def __init__(self, server_name, user, password, component='Infrastructure', delivery_team='CI/CD'):
         self.server = server_name
         self.user = user
         self.password = password

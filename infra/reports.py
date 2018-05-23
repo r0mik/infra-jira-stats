@@ -21,11 +21,11 @@ class Reports:
                     latest_date = j
 
         return time
+
     def history_of_task(self, issue, status):
         if type(status) != int:
             status=issueparser.status_to_int(status)
         time = 0
-        out={}
         latest_date = None
         issue = self.jira.get_issue_by_name(issue)
         trans = self.jira.get_issue_transitions(issue, status)
@@ -35,8 +35,6 @@ class Reports:
                     time += int((j - latest_date).days)
                 else:
                     latest_date = j
-
-
         return time
 
     def return_epics(self):

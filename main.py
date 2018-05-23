@@ -21,7 +21,7 @@ conf = Config(options.configpath)
 conf.get_access()
 conf.get_settings()
 
-myjira = jiralib.JiraLib(conf.jira_host,conf.jira_username,conf.jira_password,conf.component_name,conf.delivery_team)
+myjira = jiralib.JiraLib(conf.jira_host, conf.jira_username, conf.jira_password, conf.component_name, conf.delivery_team)
 myjira.connect()
 myreport = reports.Reports(myjira)
 

@@ -19,6 +19,7 @@ def errors_to_strings(argument):
     }
     return switcher.get(argument)
 
+
 def status_to_int(status):
         switcher = {
         'Open': 1,
@@ -32,6 +33,7 @@ def status_to_int(status):
         }
         return switcher.get(status)
 
+
 def priority_to_int(status):
         switcher = {
         'Some day': 1,
@@ -44,9 +46,9 @@ def priority_to_int(status):
 
 
 def parse_descriptions(text):
-    text=text.lower()
+    text = text.lower()
     position = text.find('acceptance criteria')
-    if position >=0:
+    if position >= 0:
         if len(text[position+len('acceptance criteria'):len(text)]) <10:
             return 2
         else:
